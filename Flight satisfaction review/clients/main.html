@@ -1,0 +1,332 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Airline Satisfaction Predictor</title>
+        <link rel="stylesheet" href="style.css">
+        <script src='main.js'></script>
+    </head>
+    <body>
+        
+    <div class="img"></div>
+    <div class="container_1">
+    <form class="form_1" onsubmit="predictSatisfaction(event)">
+        <h1>Airline Satisfaction Prediction</h1><br><hr>
+            <h2>Customer Type</h2>
+
+            <div class="switch-field">
+            <input type="radio" class="customer_type" name="customer_types" value="1" id="customer_type-1">
+            <label for="customer_type-1">Loyal Customer</label>
+            
+            <input type="radio" class="customer_type" name="customer_types" value="2" id="customer_type-2">
+            <label for="customer_type-2">Disloyal Customer</label>
+
+        </div>
+
+        <h2>Age</h2>
+            <input type="number" id="age" min="1" max="100" class="age"><br>
+    
+        
+        <h2>Type of Travel</h2>
+
+        <div class="switch-field">
+        
+        <input type="radio" class="travel_type" name="travel_type" value="1" id="personal_travel">
+        <label for="personal_travel">Personal Travel</label>
+
+        <input type="radio" class="travel_type" name="travel_type" value="0" id="Business_travel">
+        <label for="Business_travel">Business Travel</label>
+
+        </div>
+
+        <h2>Class</h2>
+        <div class="switch-field">
+
+        <input type="radio" class="classes" name="class" value="0" id="class_1">
+        <label for="class_1">Economy</label>
+
+        <input type="radio" class="classes" name="class" value="1" id="class_2">
+        <label for="class_2">Business</label>
+
+        <input type="radio" class="classes" name="class" value="2" id="class_3">
+        <label for="class_3">Economy Plus</label>
+
+        </div>
+        
+        <h2>Flight Distance</h2>
+        <input type="number" id="flight_distance" min="1" class="flight_distance"><br>
+    </form>
+    </div>
+
+    <div class="container_2">
+        <form class="form_1" onsubmit="predictSatisfaction(event)">
+        <h2>Seat Comfort</h2>
+        <div class="switch-field">
+
+            <input type="radio" class="seat_comfort" name ="seat_comfort" value="1" id="seat_comfort_1">
+            <label for="seat_comfort_1">1</label>
+        
+            <input type="radio" class="seat_comfort" name ="seat_comfort" value="2" id="seat_comfort_2">
+            <label for="seat_comfort_2">2</label>
+        
+            <input type="radio" class="seat_comfort" name ="seat_comfort" value="3" id="seat_comfort_3">
+            <label for="seat_comfort_3">3</label>
+        
+            <input type="radio" class="seat_comfort" name ="seat_comfort" value="4" id="seat_comfort_4">
+            <label for="seat_comfort_4">4</label>
+        
+            <input type="radio" class="seat_comfort" name ="seat_comfort" value="5" id="seat_comfort_5">
+            <label for="seat_comfort_5">5</label>
+        
+        </div>
+        
+        <h2>Departure/Arrival Convenience: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="convenience" name="convenience" value="1" id="convenience_1">
+            <label for="convenience_1">1</label>
+        
+            <input type="radio" class="convenience" name="convenience" value="2" id="convenience_2">
+            <label for="convenience_2">2</label>
+        
+            <input type="radio" class="convenience" name="convenience" value="3" id="convenience_3">
+            <label for="convenience_3">3</label>
+        
+            <input type="radio" class="convenience" name="convenience" value="4" id="convenience_4">
+            <label for="convenience_4">4</label>
+        
+            <input type="radio" class="convenience" name="convenience" value="5" id="convenience_5">
+            <label for="convenience_5">5</label>
+        
+        </div>
+
+        <h2>Food and Drink: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="food_drink" name="food_drink" value="1" id="food_drink_1">
+            <label for="food_drink_1">1</label>
+        
+            <input type="radio" class="food_drink" name="food_drink" value="2" id="food_drink_2">
+            <label for="food_drink_2">2</label>
+        
+            <input type="radio" class="food_drink" name="food_drink" value="3" id="food_drink_3">
+            <label for="food_drink_3">3</label>
+        
+            <input type="radio" class="food_drink" name="food_drink" value="4" id="food_drink_4">
+            <label for="food_drink_4">4</label>
+        
+            <input type="radio" class="food_drink" name="food_drink" value="5" id="food_drink_5">
+            <label for="food_drink_5">5</label>
+        
+        </div>
+        
+        <h2>Inflight Wifi: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="wifi" name="wifi" value="1" id="wifi1">
+            <label for="wifi1">1</label>
+        
+            <input type="radio" class="wifi" name="wifi" value="2" id="wifi2">
+            <label for="wifi2">2</label>
+        
+            <input type="radio" class="wifi" name="wifi" value="3" id="wifi3">
+            <label for="wifi3">3</label>
+        
+            <input type="radio" class="wifi" name="wifi" value="4" id="wifi4">
+            <label for="wifi4">4</label>
+        
+            <input type="radio" class="wifi" name="wifi" value="5" id="wifi5">
+            <label for="wifi5">5</label>
+        
+        </div>
+        
+        <h2>Inflight Entertainment: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="entertainment" name="entertainment" value="1" id="entertainment1">
+            <label for="entertainment1">1</label>
+        
+            <input type="radio" class="entertainment" name="entertainment" value="2" id="entertainment2">
+            <label for="entertainment2">2</label>
+        
+            <input type="radio" class="entertainment" name="entertainment" value="3" id="entertainment3">
+            <label for="entertainment3">3</label>
+        
+            <input type="radio" class="entertainment" name="entertainment" value="4" id="entertainment4">
+            <label for="entertainment4">4</label>
+        
+            <input type="radio" class="entertainment" name="entertainment" value="5" id="entertainment5">
+            <label for="entertainment5">5</label>
+        
+        </div>
+
+        <h2>Online Support: </h2>
+        <div class="switch-field">
+
+            <input type="radio" class="online_support" name="online_support" value="1" id="online_support1">
+            <label for="online_support1">1</label>
+        
+            <input type="radio" class="online_support" name="online_support" value="2" id="online_support2">
+            <label for="online_support2">2</label>
+        
+            <input type="radio" class="online_support" name="online_support" value="3" id="online_support3">
+            <label for="online_support3">3</label>
+        
+            <input type="radio" class="online_support" name="online_support" value="4" id="online_support4">
+            <label for="online_support4">4</label>
+        
+            <input type="radio" class="online_support" name="online_support" value="5" id="online_support5">
+            <label for="online_support5">5</label>
+        
+        </div>
+        
+        <h2>Ease of Online Booking: </h2>
+        <div class="switch-field">
+
+            <input type="radio" class="booking_ease" name="booking_ease" value="1" id="booking_ease1">
+            <label for="booking_ease1">1</label>
+        
+            <input type="radio" class="booking_ease" name="booking_ease" value="2" id="booking_ease2">
+            <label for="booking_ease2">2</label>
+        
+            <input type="radio" class="booking_ease" name="booking_ease" value="3" id="booking_ease3">
+            <label for="booking_ease3">3</label>
+        
+            <input type="radio" class="booking_ease" name="booking_ease" value="4" id="booking_ease4">
+            <label for="booking_ease4">4</label>
+        
+            <input type="radio" class="booking_ease" name="booking_ease" value="5" id="booking_ease5">
+            <label for="booking_ease5">5</label>
+        
+        </div>
+        
+        <h2>On-board Service: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="onboard_service" name="onboard_service" value="1" id="onboard_service1">
+            <label for="onboard_service1">1</label>
+        
+            <input type="radio" class="onboard_service" name="onboard_service" value="2" id="onboard_service2">
+            <label for="onboard_service2">2</label>
+        
+            <input type="radio" class="onboard_service" name="onboard_service" value="3" id="onboard_service3">
+            <label for="onboard_service3">3</label>
+        
+            <input type="radio" class="onboard_service" name="onboard_service" value="4" id="onboard_service4">
+            <label for="onboard_service4">4</label>
+        
+            <input type="radio" class="onboard_service" name="onboard_service" value="5" id="onboard_service5">
+            <label for="onboard_service5">5</label>
+        
+        </div>
+        
+        <h2>Leg Room Service: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="legroom" name="legroom" value="1" id="legroom1">
+            <label for="legroom1">1</label>
+        
+            <input type="radio" class="legroom" name="legroom" value="2" id="legroom2">
+            <label for="legroom2">2</label>
+        
+            <input type="radio" class="legroom" name="legroom" value="3" id="legroom3">
+            <label for="legroom3">3</label>
+        
+            <input type="radio" class="legroom" name="legroom" value="4" id="legroom4">
+            <label for="legroom4">4</label>
+        
+            <input type="radio" class="legroom" name="legroom" value="5" id="legroom5">
+            <label for="legroom5">5</label>
+        
+        </div>
+        
+        <h2>Baggage Handling: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="baggage_handling" name="baggage_handling" value="1" id="baggage_handling1">
+            <label for="baggage_handling1">1</label>
+        
+            <input type="radio" class="baggage_handling" name="baggage_handling" value="2" id="baggage_handling2">
+            <label for="baggage_handling2">2</label>
+        
+            <input type="radio" class="baggage_handling" name="baggage_handling" value="3" id="baggage_handling3">
+            <label for="baggage_handling3">3</label>
+        
+            <input type="radio" class="baggage_handling" name="baggage_handling" value="4" id="baggage_handling4">
+            <label for="baggage_handling4">4</label>
+        
+            <input type="radio" class="baggage_handling" name="baggage_handling" value="5" id="baggage_handling5">
+            <label for="baggage_handling5">5</label>
+        
+        </div>
+        
+        <h2>Check-in Service: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="checkin_service" name="checkin_service" value="1" id="checkin_service1">
+            <label for="checkin_service1">1</label>
+        
+            <input type="radio" class="checkin_service" name="checkin_service" value="2" id="checkin_service2">
+            <label for="checkin_service2">2</label>
+        
+            <input type="radio" class="checkin_service" name="checkin_service" value="3" id="checkin_service3">
+            <label for="checkin_service3">3</label>
+        
+            <input type="radio" class="checkin_service" name="checkin_service" value="4" id="checkin_service4">
+            <label for="checkin_service4">4</label>
+        
+            <input type="radio" class="checkin_service" name="checkin_service" value="5" id="checkin_service5">
+            <label for="checkin_service5">5</label>
+        
+        </div>
+        
+        <h2>Cleanliness: </h2>
+        <div class="switch-field">
+        
+            <input type="radio" class="cleanliness" name="cleanliness" value="1" id="cleanliness1">
+            <label for="cleanliness1">1</label>
+        
+            <input type="radio" class="cleanliness2" name="cleanliness" value="2" id="cleanliness2">
+            <label for="cleanliness2">2</label>
+        
+            <input type="radio" class="cleanliness3" name="cleanliness" value="3" id="cleanliness3">
+            <label for="cleanliness3">3</label>
+        
+            <input type="radio" class="cleanliness4" name="cleanliness" value="4" id="cleanliness4">
+            <label for="cleanliness4">4</label>
+        
+            <input type="radio" class="cleanliness5" name="cleanliness" value="5" id="cleanliness5">
+            <label for="cleanliness5">5</label>
+        
+        </div>
+        
+        <h2>Online Boarding: </h2>
+        <div class="switch-field">
+
+            <input type="radio" class="online_boarding" name="online_boarding" value="1" id="online_boarding1">
+            <label for="online_boarding1">1</label>
+        
+            <input type="radio" class="online_boarding" name="online_boarding" value="2" id="online_boarding2">
+            <label for="online_boarding2">2</label>
+        
+            <input type="radio" class="online_boarding" name="online_boarding" value="3" id="online_boarding3">
+            <label for="online_boarding3">3</label>
+        
+            <input type="radio" class="online_boarding" name="online_boarding" value="4" id="online_boarding4">
+            <label for="online_boarding4">4</label>
+        
+            <input type="radio" class="online_boarding" name="online_boarding" value="5" id="online_boarding5">
+            <label for="online_boarding5">5</label>
+        
+        </div>
+        
+        <button onclick="predictSatisfaction()" class="submit">Predict</button>
+
+        <h3 id="result">Prediction: </h3>
+    </div>
+    </form>
+    </div>
+
+    </body>
+    </html>

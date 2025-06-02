@@ -4,6 +4,9 @@
 
 This project aims to predict airline passenger satisfaction using machine learning techniques. By analyzing various factors related to flight experiences, the model determines whether a passenger is likely to be satisfied or not. This analysis can help airlines enhance their services and improve customer experiences.
 
+## **Web App preview**
+![Prediction Web App](Flight_customer_prediction.png)
+
 ## **Problem Statement**
 
 Airlines seek to understand the key factors influencing passenger satisfaction to improve service quality and customer retention. This project addresses the challenge by building a predictive model based on passenger data.

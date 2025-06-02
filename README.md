@@ -1,14 +1,14 @@
-# Flight Customer Satisfaction Prediction
+# **Flight Customer Satisfaction Prediction**
 
-## Overview
+## **Overview**
 
 This project aims to predict airline passenger satisfaction using machine learning techniques. By analyzing various factors related to flight experiences, the model determines whether a passenger is likely to be satisfied or not. This analysis can help airlines enhance their services and improve customer experiences.
 
-## Problem Statement
+## **Problem Statement**
 
 Airlines seek to understand the key factors influencing passenger satisfaction to improve service quality and customer retention. This project addresses the challenge by building a predictive model based on passenger data.
 
-## Dataset
+## **Dataset**
 
 The dataset includes information on passengers' demographics, flight details, and service ratings. Key features include:
 
@@ -23,18 +23,18 @@ The dataset includes information on passengers' demographics, flight details, an
 - Onboard Services (e.g., Food, Cleanliness)  
 - Overall Satisfaction  
 
-## Approach
+## **Approach**
 
 - **Data Preprocessing**: Handled missing values, encoded categorical variables, and normalized numerical features.  
 - **Exploratory Data Analysis (EDA)**: Identified patterns and correlations between features and satisfaction levels.  
 - **Model Selection**: Evaluated Logistic Regression classification algorithm.  
 - **Model Evaluation**: Assessed models using metrics such as accuracy, precision, recall, and F1-score.
 
-## Results
+## **Results**
 
 The Logistic Regression model achieved the highest accuracy OF 78 to 80%, indicating its effectiveness in predicting passenger satisfaction based on the provided features.
 
-## Technologies Used
+## **Technologies Used**
 
 - Python  
 - Pandas  
@@ -48,7 +48,7 @@ The Logistic Regression model achieved the highest accuracy OF 78 to 80%, indica
 - JS
 - Flask  
 
-## How to Run
+## **How to Run**
 
 1. Clone the repository:
 ```bash
@@ -69,13 +69,13 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 Open the notebook file and execute the cells to see the analysis and results.
-## Project Highlights
+## **Project Highlights**
 - Heatmap to understand key factors affecting passenger satisfaction
 - Insights into how different services and delays impact overall satisfaction
 
 
 
-## Contact
+## **Contact**
 For any questions or feedback, feel free to reach out:
 
 Name: Adarsh R Shenoy
